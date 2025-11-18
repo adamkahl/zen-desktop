@@ -2,7 +2,9 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-"use strict";
+/* global ExtensionAPI, ExtensionError */
+
+'use strict';
 
 this.zenGlance = class extends ExtensionAPI {
   getAPI(context) {
@@ -15,7 +17,7 @@ this.zenGlance = class extends ExtensionAPI {
          */
         async isGlanceTab(tabId) {
           const { tabManager } = context.extension;
-          
+
           // Get the native tab from the tab ID
           const tab = tabManager.get(tabId);
           if (!tab) {
@@ -23,9 +25,9 @@ this.zenGlance = class extends ExtensionAPI {
           }
 
           const nativeTab = tab.nativeTab;
-          
+
           // Check if the tab has the zen-glance-tab attribute
-          return nativeTab.hasAttribute("zen-glance-tab");
+          return nativeTab.hasAttribute('zen-glance-tab');
         },
       },
     };
