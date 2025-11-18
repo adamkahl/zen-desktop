@@ -1,0 +1,26 @@
+[
+  {
+    "namespace": "zenGlance",
+    "description": "API for interacting with Zen Glance features",
+    "functions": [
+      {
+        "name": "isGlanceTab",
+        "type": "function",
+        "description": "Check if a given tab is a glance tab",
+        "async": true,
+        "parameters": [
+          {
+            "name": "tabId",
+            "type": "integer",
+            "minimum": 0,
+            "description": "The ID of the tab to check"
+          }
+        ],
+        "returns": {
+          "type": "boolean",
+          "description": "True if the tab is a glance tab, false otherwise"
+        }
+      }
+    ]
+  }
+]
